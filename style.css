@@ -1,7 +1,6 @@
-/* 插件启用时隐藏原始快速回复栏 */
-body.qra-enabled #qr--bar {
-    height: 0px !important;
-    overflow: hidden !important;
+/* 新规则：插件启用时，隐藏 #qr--bar 内的原始触发器和【不属于输入助手的】按钮容器 */
+body.qra-enabled #qr--bar > #qr--popoutTrigger,
+body.qra-enabled #qr--bar > .qr--buttons:not(#input_helper_toolbar) {
 }
 
 /* 插件禁用时显示原始快速回复栏 */
